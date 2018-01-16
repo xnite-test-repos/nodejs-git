@@ -1,4 +1,3 @@
-require('simple-git')()
-     .add('./*')
-     .commit("first commit!")
-     .push([], () => console.log('done'));
+git = require('simple-git');
+const repo = git(__dirname);
+repo.add('./*').commit("first commit!").push([], () => console.log('done'));
